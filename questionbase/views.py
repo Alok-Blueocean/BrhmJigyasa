@@ -126,6 +126,7 @@ class UserLView(ListAPIView):
     '''
     queryset = User.objects.all()
     serializer_class = UserSerializers
+    
 class UserCMView(CreateAPIView):
     permission_classes = [AllowAny]
     queryset = User.objects.all()

@@ -2,7 +2,7 @@ from rest_framework import serializers
 from django.contrib.auth import authenticate, login, logout
 from rest_framework import exceptions
 from .models import Question,Answer,Tag,SubTag,Referance
-
+from django.contrib.auth.models import User 
 
 class AnswerSerializer(serializers.ModelSerializer):
     class Meta:
@@ -90,11 +90,6 @@ class ReferanceViewSerializer(serializers.ModelSerializer):
     class Meta:
         model = Referance
         fields = '__all__'
-
-
-
-
-from django.contrib.auth.models import User 
   
   
 class UserSerializers(serializers.ModelSerializer): 
